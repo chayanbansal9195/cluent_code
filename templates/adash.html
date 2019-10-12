@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Cluent</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+        <a href="/adash" class="brand-logo"
+          ><img
+            src="{{url_for('static',filename='1.png')}}"
+            alt=""
+            width="100px"
+            height="50px"
+        /></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/aaccount">Account</a></li>
+          <li><a href="/assigncoupons">Assign Coupon</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br />
+    <div class="container">
+        <h3 align="center">Valuable Customers</h3>
+        <p align="center"><i>(Clusters are arranged in decreasing order)</i> </p>
+        <div class="col s12 m7" >
+                <br>
+                <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                  <div class="card-image">
+                    <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/budgetCustomer.png')}}"  >
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Budget Customers</h5>
+                      <p style="font-size: 15px;">Customers have less Annual Income but spend a lot of in shopping. These are  Budget Customers. They are already spending the maximum they could. <br><span style="color: green;font-weight:bolder"> (maintain their frequency) </span><br>
+                          <span style="font-weight: bolder;">Count: 22</span> 
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m7" >
+                  <br>
+                  <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                    <div class="card-image">
+                      <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/champions.png')}}"  >
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Champions</h5>
+                        <p style="font-size: 15px;">Customers who have good Annual income and spend a lot in shopping. These customers are Champions, and should get discount between 1st and 2nd category<br><span style="color: green;font-weight:bolder">(maintain their frequency) </span><br>
+                            <span style="font-weight: bolder;">Count: 39</span> 
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m7" >
+                    <br>
+                    <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                      <div class="card-image">
+                        <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/InactiveCustomers.png')}}"  >
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                            <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Inactive Customers</h5>
+                          <p style="font-size: 15px;">Customers who have less annual income and don't shop a lot. These are Inactive Customers <br><span style="color: red; font-weight:bolder;">(don't focus much on these customers) </span><br>
+                              <span style="font-weight: bolder;">Count: 23</span> 
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s12 m7" >
+                      <br>
+                      <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                        <div class="card-image">
+                          <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/unreliable.png')}}"  >
+                        </div>
+                        <div class="card-stacked">
+                          <div class="card-content">
+                              <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Unreliable</h5>
+                            <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping. These are Potential Customers, this group should get maximum discount.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
+                                <span style="font-weight: bolder;">Count: 35</span> 
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m7" >
+                        <br>
+                        <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                          <div class="card-image">
+                            <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/potential.png')}}"  >
+                          </div>
+                          <div class="card-stacked">
+                            <div class="card-content">
+                                <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Potential Customers</h5>
+                              <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping. These are Potential Customers, this group should get maximum discount.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
+                                  <span style="font-weight: bolder;">Count: 81</span> 
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                <div style="margin-bottom: 100px;"></div>
+      </div>
+    </div>
+  </body>
+</html>

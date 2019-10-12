@@ -1,0 +1,17 @@
+unreliable
+Customers who have higher Annual Income but spend very less.These customers are "Un-reliable" and this group should be given minimal discount.
+
+potential
+Customers who have average Annual Income but carefully spend in shopping. These are Potential Customers, this group should get maximum discount.(focus to increase their frequency)
+
+champions
+Customers who have good Annual income and spend a lot in shopping. These customers are Champions, and should get discount between 1st and 2nd category(maintain their frequency)
+
+budgetCustomer
+Customers have less Annual Income but spend a lot of in shopping. These are  Budget Customers. They are already spending the maximum they could.(maintain their frequency)
+
+InactiveCustomers
+Customers who have less annual income and don't shop a lot. These are Inactive Customers(don't focus much on these customers) 
+
+
+
