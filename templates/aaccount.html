@@ -23,14 +23,14 @@
 
   <body >
     <nav>
-      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+      <div class="nav-wrapper" style="background-color:rgb(39, 5, 39);">
         <a href="/adash" class="brand-logo"
           ><img
-            src="{{url_for('static',filename='images/g.png')}}"
+            src="{{url_for('static',filename='images/00.png')}}"
             alt=""
-            width="70px"
-            height="60px"
-            style="padding: 10px;"
+            width="90px"
+            height="80px"
+            style="padding: 10px 15px 20px 15px"
         /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="/aaccount">Account</a></li>
@@ -42,92 +42,96 @@
     <br /><br />
     <div class="row container">
         <div class="col s4"></div>
-            <h5>Store Details</h5>
+            <h4 style="font-weight: bold;">Store Details</h4>
             <form class="col s12">
                     
                     <div class="row">
                             <div class="col s4"><img style="border-radius:50%" src="{{url_for('static',filename='images/111.png')}}"style="" alt=""  height="150px" width="150px"  ></div>
-                            <div class="input-field col s6">
+                            <div class="input-field col s3">
                               <input
                                 id="input_text"
+                                style="font-size: 25px; font-weight:bold"
                                 type="text"
                                 data-length="10"
                                 name="brand_id"
                                 value="BR201901"
                                 readonly
                               />
-                              <label for="input_text" style="font-weight: bolder;font-size:15px">Brand Id</label>
+                              <label for="input_text" style="font-weight: bolder;font-size:20px">Brand Id</label>
                             </div>
-                          </div>
-              <div class="row">
+                         
                     <div class="col s4"></div>
-                <div class="input-field col s6">
+                <div class="input-field col s3">
                   <input
                     id="input_text"
+                    style="font-size: 25px; font-weight:bold"
                     type="text"
                     data-length="10"
                     name="owner_name"
                     value="Vishal Jain"
                     readonly
                   />
-                  <label for="input_text" style="font-weight: bolder;font-size:15px">Owner Name</label>
+                  <label for="input_text" style="font-weight: bolder;font-size:20px">Owner Name</label>
                 </div>
               </div>
+              <div class="row">
+                  <div class="col s4"></div>
+                  <div class="input-field col s3">
+                    <input
+                    style="font-size: 25px; font-weight:bold"
+                      id="input_text"
+                      type="text"
+                      data-length="10"
+                      name="total_customers"
+                      value="210"
+                      readonly
+                    />
+                    <label for="input_text" style="font-weight: bolder;font-size:20px">Total Customers</label>
+                  </div>
+                
+                      <div class="col s4"></div>
+                      <div class="input-field col s3">
+                        <input
+                        style="font-size: 25px; font-weight:bold"
+                          id="input_text"
+                          type="text"
+                          data-length="10"
+                          name="total_sales" value="₹200000" readonly
+                        />
+                        <label for="input_text" style="font-weight: bolder;font-size:20px">Total Sales</label>
+                      </div>
+                    </div>
       
               <div class="row">
                     <div class="col s4"></div>
-                <div class="input-field col s6">
+                <div class="input-field col s3">
                   <input
                     id="input_text"
+                    style="font-size: 25px; font-weight:bold"
                     type="text"
                     data-length="10"
                     name="email"
                     value="vishal@gmail.com"
                     readonly
                   />
-                  <label for="input_text" style="font-weight: bolder;font-size:15px">Email</label>
+                  <label for="input_text" style="font-weight: bolder;font-size:20px">Email</label>
                 </div>
-              </div>
-              <div class="row">
+              
                     <div class="col s4"></div>
-                    <div class="input-field col s6">
+                    <div class="input-field col s3">
                       <input
                         id="input_text"
+                        style="font-size: 25px; font-weight:bold"
                         type="text"
                         data-length="10"
                         name="brand_name"
                         value="Bata"
                         readonly
                       />
-                      <label for="input_text" style="font-weight: bolder;font-size:15px">Brand Name</label>
+                      <label for="input_text" style="font-weight: bolder;font-size:20px">Brand Name</label>
                     </div>
                   </div>
-                  <div class="row">
-                        <div class="col s4"></div>
-                        <div class="input-field col s6">
-                          <input
-                            id="input_text"
-                            type="text"
-                            data-length="10"
-                            name="total_customers"
-                            value="210"
-                            readonly
-                          />
-                          <label for="input_text" style="font-weight: bolder;font-size:15px">Total Customers</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                            <div class="col s4"></div>
-                            <div class="input-field col s6">
-                              <input
-                                id="input_text"
-                                type="text"
-                                data-length="10"
-                                name="total_sales" value="₹200000" readonly
-                              />
-                              <label for="input_text" style="font-weight: bolder;font-size:15px">Total Sales</label>
-                            </div>
-                          </div>
+                 
                           
               
             </form>

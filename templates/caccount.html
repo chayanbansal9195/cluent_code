@@ -16,21 +16,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
 
   <body>
     <nav>
-      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+      <div class="nav-wrapper" style="background-color:rgb(39, 5, 39);">
         <a href="/cdash" class="brand-logo"
           ><img
-            src="{{url_for('static',filename='images/g.png')}}"
-            alt=""
-            width="70px"
-            height="60px"
-            style="padding: 10px;"
+          src="{{url_for('static',filename='images/00.png')}}"
+          alt=""
+          width="90px"
+          height="80px"
+          style="padding: 10px 15px 20px 15px"
         /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="active"><a href="/caccount">Account</a></li>
@@ -42,97 +45,120 @@
     </nav>
     <br /><br />
     <div class="row container">
-        <div class="col s4"></div>
-            <h5>Customer Details</h5>
-            <form class="col s12">
-                    
-                    <div class="row">
-                            <div class="col s4"><img style="border-radius:50%" src="{{url_for('static',filename='images/pr.jpg')}}"style="" alt=""  height="150px" width="150px"  ></div>
-                            <div class="input-field col s6">
-                              <input
-                                id="input_text"
-                                type="text"
-                                data-length="10"
-                                name="customer_id"
-                                value="CR201901"
-                                readonly
-                              />
-                              <label for="input_text" style="font-weight: bolder;font-size:15px">Customer Id</label>
-                            </div>
-                          </div>
-              <div class="row">
-                    <div class="col s4"></div>
-                <div class="input-field col s6">
-                  <input
-                    id="input_text"
-                    type="text"
-                    data-length="10"
-                    name="customer_name"
-                    value="Gunjan Verma"
-                    readonly
-                  />
-                  <label for="input_text" style="font-weight: bolder;font-size:15px">Name</label>
-                </div>
-              </div>
-      
-              <div class="row">
-                    <div class="col s4"></div>
-                <div class="input-field col s6">
-                  <input
-                    id="input_text"
-                    type="text"
-                    data-length="10"
-                    name="email"
-                    value="gunjan@gmail.com"
-                    readonly
-                  />
-                  <label for="input_text" style="font-weight: bolder;font-size:15px">Email</label>
-                </div>
-              </div>
-              <div class="row">
-                    <div class="col s4"></div>
-                    <div class="input-field col s6">
-                      <input
-                        id="input_text"
-                        type="text"
-                        data-length="10"
-                        name="shops"
-                        value="zara, bata, reebok, nike, woodland"
-                        readonly
-                      />
-                      <label for="input_text" style="font-weight: bolder;font-size:15px">Shops</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                        <div class="col s4"></div>
-                        <div class="input-field col s6">
-                          <input
-                            id="input_text"
-                            type="text"
-                            data-length="10"
-                            name="total_saved"
-                            value="₹2000"
-                            readonly
-                          />
-                          <label for="input_text" style="font-weight: bolder;font-size:15px">Total Saved</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                            <div class="col s4"></div>
-                            <div class="input-field col s6">
-                              <input
-                                id="input_text"
-                                type="text"
-                                data-length="10"
-                                name="total_spend" value="₹10000" readonly
-                              />
-                              <label for="input_text" style="font-weight: bolder;font-size:15px">Total Spending</label>
-                            </div>
-                          </div>
-                          
-              
-            </form>
+      <div class="col s4"></div>
+      <h4 style="font-weight:bold">Customer Details</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="col s4">
+            <img
+              style="border-radius:50%"
+              src="{{url_for('static',filename='images/pr.jpg')}}"
+              style=""
+              alt=""
+              height="150px"
+              width="150px"
+            />
           </div>
-    
+          <div class="input-field col s4">
+            <input
+              id="input_text"
+              style="font-size: 25px; font-weight:bold"
+              type="text"
+              data-length="10"
+              name="customer_id"
+              value="CR201901"
+              readonly
+            />
+            <label for="input_text" style="font-weight: bolder;font-size:20px"
+              >Customer Id</label
+            >
+          </div>
+       
+          <div class="col s4"></div>
+          <div class="input-field col s4">
+            <input
+              id="input_text"
+              style="font-size: 25px; font-weight:bold"
+              type="text"
+              data-length="10"
+              name="customer_name"
+              value="Gunjan Verma"
+              readonly
+            />
+            <label for="input_text" style="font-weight: bolder;font-size:20px"
+              >Name</label
+            >
+          </div>
+        </div>
+        <div class="row">
+            <div class="col s4"></div>
+            <div class="input-field col s4">
+              <input
+                id="input_text"
+                style="font-size: 25px; font-weight:bold"
+                type="text"
+                data-length="10"
+                name="total_saved"
+                value="₹2000"
+                readonly
+              />
+              <label for="input_text" style="font-weight: bolder;font-size:20px"
+                >Total Saved</label
+              >
+            </div>
+          
+            <div class="col s4"></div>
+            <div class="input-field col s4">
+              <input
+                id="input_text"
+                style="font-size: 25px; font-weight:bold"
+                type="text"
+                data-length="10"
+                name="total_spend"
+                value="₹10000"
+                readonly
+              />
+              <label for="input_text" style="font-weight: bolder;font-size:20px"
+                >Total Spending</label
+              >
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col s4"></div>
+          <div class="input-field col s4">
+            <input
+              id="input_text"
+              style="font-size: 25px; font-weight:bold"
+              type="text"
+              data-length="10"
+              name="email"
+              value="gunjan@gmail.com"
+              readonly
+            />
+            <label for="input_text" style="font-weight: bolder;font-size:20px"
+              >Email</label
+            >
+          </div>
+        
+          <div class="col s4"></div>
+          <div class="input-field col s4">
+            <input
+              id="input_text"
+              style="font-size: 25px; font-weight:bold"
+              type="text"
+              data-length="10"
+              name="shops"
+              value="zara, bata, reebok"
+              readonly
+            />
+            <label for="input_text" style="font-weight: bolder;font-size:20px"
+              >Shops</label
+            >
+          </div>
+        </div>
+        
+      </form>
+    </div>
   </body>
 </html>

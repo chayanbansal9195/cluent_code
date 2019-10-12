@@ -26,14 +26,14 @@
 
   <body>
     <nav>
-      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+      <div class="nav-wrapper" style="background-color:rgb(39, 5, 39);">
         <a href="/adash" class="brand-logo"
           ><img
-            src="{{url_for('static',filename='images/g.png')}}"
-            alt=""
-            width="70px"
-            height="60px"
-            style="padding: 10px;"
+          src="{{url_for('static',filename='images/00.png')}}"
+          alt=""
+          width="90px"
+          height="80px"
+          style="padding: 10px 15px 20px 15px"
         /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/aaccount">Account</a></li>
@@ -45,53 +45,73 @@
     <br /><br />
     <div class="container"><h3 align="center">Assign Coupon Values</h3></div>
     <br />
-    <div class="row">
-            
-            <div class="col s2"></div>
-        <div class="col s6" style="margin-left: 110px;">
-      <div class="container" style="border-radius:20px;border:2px solid grey;padding:20px">
-          
-        <table class="centered">
-          <thead>
-            <tr>
-                <th>Serial No</th>
-              <th>Cluster Name</th>
-              <th>Value(0-100)%</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-                <td>1</td>
-              <td>Champions</td>
-              <td>20%</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Potential</td>
-              <td>15%</td>
-            </tr>
-            <tr>
-                    <td>3</td>
-                    <td>Budget</td>
-                    <td>10%</td>
-                  </tr>
-                  <tr>
-                        <td>4</td>
-                        <td>Un-Reliable</td>
-                        <td>5%</td>
-                      </tr>
-                      <tr>
-                            <td>5</td>
-                            <td>In-Active</td>
-                            <td>1%</td>
-                          </tr>
-          </tbody>
-        </table>
-        </div>
-        </div>
-       
-      </div>
+    <div class="container">
+        
+        <div  style="float: center;"><button class="btn " style="background-color:red">Revoke</button></div>
+      
+        <div class="row">
+            <div class="col s6 m4">
+              <div class="card darken-1" style="background-color:rgb(52, 69, 77)">
+                <div class="card-content white-text">
+                    <h5 style="color:WHITE;font-weight:bolder;"><img src="https://img.icons8.com/color/30/000000/budget.png">Budget </h5>
+                    <span style="color: WHITE;font-weight:bolder"> (maintain their frequency) </span>
+                </div>
+                <div class="card-action">
+                  <a href="#"><input style="color: white;" type="text" name="" value="20%" id="" placeholder="Add Coupon Value"></a>
+                  <button class="btn">Update</button>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+                <div class="card darken-1" style="background-color:rgb(52, 69, 77)">
+                  <div class="card-content white-text">
+                      <h5 style="color:WHITE;font-weight:bolder;"><img src="https://img.icons8.com/office/30/000000/trophy.png">Champions</h5>
+                      <span style="color: WHITE;font-weight:bolder"> (maintain their frequency) </span>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><input style="color: white;" type="text" value="35%" name="" id="" placeholder="Add Coupon Value"></a>
+                    <button class="btn">Update</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col s6 m4">
+                  <div class="card darken-1"style="background-color:rgb(52, 69, 77)">
+                    <div class="card-content white-text">
+                        <h5 style="color:WHITE;font-weight:bolder;"><img src="https://img.icons8.com/officel/30/000000/confused.png">Inactive</h5>
+                        <span style="color: WHITE;font-weight:bolder">(don't focus much on them) </span>
+                    </div>
+                    <div class="card-action">
+                      <a href="#"><input style="color: white;" type="text" value="60%" name="" id="" placeholder="Add Coupon Value"></a>
+                      <button class="btn">Update</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2"></div>
+                <div class="col s6 m4">
+                    <div class="card darken-1"style="background-color:rgb(52, 69, 77)">
+                      <div class="card-content white-text">
+                          <h5 style="color:WHITE;font-weight:bolder;"><img src="https://img.icons8.com/officel/30/000000/medium-risk.png">Unreliable</h5>
+                          <span style="color: WHITE;font-weight:bolder">(focus to increase them)  </span>
+                      </div>
+                      <div class="card-action">
+                        <a href="#"><input style="color: white;" type="text" value="55%" name="" id="" placeholder="Add Coupon Value"></a>
+                        <button class="btn">Update</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m4">
+                      <div class="card darken-1" style="background-color:rgb(52, 69, 77)">
+                        <div class="card-content white-text">
+                            <h5 style="color:WHITE;font-weight:bolder;"><img src="https://img.icons8.com/color/30/000000/fingers-crossed.png">Potential</h5>
+                            <span style="color: WHITE;font-weight:bolder">(focus to increase them)  </span>
+                        </div>
+                        <div class="card-action">
+                          <a href="#"><input style="color: white;" type="text" value="41%" name="" id="" placeholder="Add Coupon Value"></a>
+                          <button class="btn">Update</button>
+                        </div>
+                      </div>
+                    </div>
+          </div>
     </div>
   </body>
 </html>

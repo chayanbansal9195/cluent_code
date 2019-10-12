@@ -12,6 +12,7 @@
     <title>Cluent</title>
 
     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/dropdown.css')}}">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -19,17 +20,39 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <style>
+      .dropdownn {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-contentn {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdownn:hover .dropdown-contentn {
+        display: block;
+      }
+   </style>
   </head>
 
   <body>
+      
     <nav>
-      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+      <div class="nav-wrapper"style="background-color:rgb(39, 5, 39);">
         <a href="/adash" class="brand-logo"
           ><img
-            src="{{url_for('static',filename='1.png')}}"
-            alt=""
-            width="100px"
-            height="50px"
+          src="{{url_for('static',filename='images/00.png')}}"
+          alt=""
+          width="90px"
+          height="80px"
+          style="padding: 10px 15px 20px 15px"
         /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/aaccount">Account</a></li>
@@ -44,15 +67,24 @@
         <p align="center"><i>(Clusters are arranged in decreasing order)</i> </p>
         <div class="col s12 m7" >
                 <br>
-                <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                <div class="card horizontal" style="box-shadow:10px 10px 5px grey;">
                   <div class="card-image">
-                    <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/budgetCustomer.png')}}"  >
+                      <img style="margin-top: 20px;" width="150px" height="150px" src="https://img.icons8.com/color/96/000000/budget.png">
                   </div>
                   <div class="card-stacked">
                     <div class="card-content">
                         <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Budget Customers</h5>
-                      <p style="font-size: 15px;">Customers have less Annual Income but spend a lot of in shopping. These are  Budget Customers. They are already spending the maximum they could. <br><span style="color: green;font-weight:bolder"> (maintain their frequency) </span><br>
-                          <span style="font-weight: bolder;">Count: 22</span> 
+                      <p style="font-size: 15px;">Customers have less Annual Income but spend a lot of in shopping. <br><span style="color: green;font-weight:bolder"> (maintain their frequency) </span><br>
+                          <span style="font-weight: bolder;"><span style="font-size: 20px;">Count: </span><span style="font-size: 30px;">22</span>
+                          <div class="dropdownn"  >
+                              <span>Cluster</span>
+                              <div class="dropdown-contentn" >
+                              <p><img height="300" src="{{url_for('static',filename='clusters/budgetCustomer.png')}}" alt=""></p>
+                              </div>
+                            </div>
+                          
+                        
+                        </span> 
                     </div>
                     
                   </div>
@@ -60,15 +92,20 @@
               </div>
               <div class="col s12 m7" >
                   <br>
-                  <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                  <div class="card horizontal" style="box-shadow:10px 10px 5px grey;">
                     <div class="card-image">
-                      <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/champions.png')}}"  >
+                        <img style="margin-top: 20px;" width="150px" height="150px" src="https://img.icons8.com/officel/80/000000/trophy.png">
                     </div>
                     <div class="card-stacked">
                       <div class="card-content">
                           <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Champions</h5>
-                        <p style="font-size: 15px;">Customers who have good Annual income and spend a lot in shopping. These customers are Champions, and should get discount between 1st and 2nd category<br><span style="color: green;font-weight:bolder">(maintain their frequency) </span><br>
-                            <span style="font-weight: bolder;">Count: 39</span> 
+                        <p style="font-size: 15px;">Customers who have good Annual income and spend a lot in shopping.<br><span style="color: green;font-weight:bolder">(maintain their frequency) </span><br>
+                            <span style="font-weight: bolder;"><span style="font-size: 20px;">Count: </span><span style="font-size: 30px;">39</span> <div class="dropdownn"style="float:centre;" >
+                                <span>Cluster</span>
+                                <div class="dropdown-contentn" >
+                                <p><img height="300" src="{{url_for('static',filename='clusters/champions.png')}}" alt=""></p>
+                                </div>
+                              </div> </span>  
                       </div>
                       
                     </div>
@@ -76,15 +113,20 @@
                 </div>
                 <div class="col s12 m7" >
                     <br>
-                    <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                    <div class="card horizontal" style="box-shadow:10px 10px 5px grey;">
                       <div class="card-image">
-                        <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/InactiveCustomers.png')}}"  >
+                          <img style="margin-top: 20px;" width="150px" height="150px" src="https://img.icons8.com/officel/80/000000/confused.png">
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
                             <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Inactive Customers</h5>
                           <p style="font-size: 15px;">Customers who have less annual income and don't shop a lot. These are Inactive Customers <br><span style="color: red; font-weight:bolder;">(don't focus much on these customers) </span><br>
-                              <span style="font-weight: bolder;">Count: 23</span> 
+                              <span style="font-weight: bolder;"><span style="font-size: 20px;">Count: </span><span style="font-size: 30px;">23</span><div class="dropdownn"style="float:centre;" >
+                                  <span>Cluster</span>
+                                  <div class="dropdown-contentn" >
+                                  <p><img height="300" src="{{url_for('static',filename='clusters/InactiveCustomers.png')}}" alt=""></p>
+                                  </div>
+                                </div>  </span>  
                         </div>
                         
                       </div>
@@ -92,15 +134,21 @@
                   </div>
                   <div class="col s12 m7" >
                       <br>
-                      <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                      <div class="card horizontal" style="box-shadow:10px 10px 5px grey;">
                         <div class="card-image">
-                          <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/unreliable.png')}}"  >
+                            <img style="margin-top: 20px;" width="150px" height="150px" src="https://img.icons8.com/officel/80/000000/medium-risk.png">
                         </div>
                         <div class="card-stacked">
                           <div class="card-content">
                               <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Unreliable</h5>
-                            <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping. These are Potential Customers, this group should get maximum discount.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
-                                <span style="font-weight: bolder;">Count: 35</span> 
+                            <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
+                                <span style="font-weight: bolder;"><span style="font-size: 20px;">Count: </span><span style="font-size: 30px;">35</span>  
+                                <div class="dropdownn"style="float:centre;" >
+                                    <span>Cluster</span>
+                                    <div class="dropdown-contentn" >
+                                    <p><img height="300" src="{{url_for('static',filename='clusters/unreliable.png')}}" alt=""></p>
+                                    </div>
+                                  </div></span>  
                           </div>
                           
                         </div>
@@ -108,20 +156,26 @@
                     </div>
                     <div class="col s12 m7" >
                         <br>
-                        <div class="card horizontal" style="box-shadow:10px 10px 5px grey;border-radius:50%">
+                        <div class="card horizontal" style="box-shadow:10px 10px 5px grey;">
                           <div class="card-image">
-                            <img style="border-radius:0 0 20px 20px" width="150px" height="200px" src="{{url_for('static',filename='clusters/potential.png')}}"  >
+                              <img style="margin-top: 20px;" width="150px" height="150px" src="https://img.icons8.com/color/96/000000/fingers-crossed.png">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
                                 <h5 style="color:rgb(14, 110, 98);font-weight:bolder;">Potential Customers</h5>
-                              <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping. These are Potential Customers, this group should get maximum discount.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
-                                  <span style="font-weight: bolder;">Count: 81</span> 
+                              <p style="font-size: 15px;">Customers who have average Annual Income but carefully spend in shopping.<br><span style="color: rgb(110, 110, 17); font-weight:bolder;">(focus to increase their frequency) </span><br>
+                                  <span style="font-weight: bolder;"><span style="font-size: 20px;">Count: </span><span style="font-size: 30px;">81</span>  <div class="dropdownn"style="float:centre;" >
+                                      <span>Cluster</span>
+                                      <div class="dropdown-contentn" >
+                                      <p><img height="300" src="{{url_for('static',filename='clusters/potential.png')}}" alt=""></p>
+                                      </div>
+                                    </div></span> 
                             </div>
                             
                           </div>
                         </div>
                       </div>
+                      
                 <div style="margin-bottom: 100px;"></div>
       </div>
     </div>
