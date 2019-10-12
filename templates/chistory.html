@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Cluent</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/chistory.css')}}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper" style="background-color:rgb(144, 144, 206);">
+        <a href="/cdash" class="brand-logo"
+          ><img
+            src="{{url_for('static',filename='1.png')}}"
+            alt=""
+            width="100px"
+            height="50px"
+        /></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/caccount">Account</a></li>
+          <li><a href="/cshop">Shop</a></li>
+          <li><a href="/cgift">Gift</a></li>
+          <li><a href="/logout">logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br />
+    <div class="container"><h3 align="center">View Purchase History</h3></div>
+    <br />
+    <div class="row">
+            <div class="col s3"></div>
+        <div class="col s5" style="margin-left: 50px;">
+      <div class="container" style="border-radius:20px;border:2px solid grey;padding:20px">
+        <table class="centered">
+          <thead>
+            <tr >
+              <th>Date</th>
+              <th>Purchase Amount</th>
+              <th>Discount Applied</th>
+            </tr>
+          </thead>
+ 
+          <tbody>
+            <tr id="myBtn">
+              <td>01-10-2019</td>
+              <td>₹4000</td>
+              <td>₹200</td>
+
+            </tr>
+            <tr id="myBtn">
+              <td>03-10-2019</td>
+              <td>₹5500</td>
+              <td>₹400</td>
+            </tr>
+            <tr id="myBtn">
+              <td>05-10-2019</td>
+              <td>₹3600</td>
+              <td>₹220</td>
+            </tr>
+            <tr id="myBtn">
+              <td>08-10-2019</td>
+              <td>₹6400 </td>
+              <td>₹600</td>
+            </tr>
+            <tr id="myBtn">
+              <td>09-10-2019</td>
+              <td>₹4000</td>
+              <td>₹200</td>
+            </tr>
+            <tr id="myBtn">
+              <td>10-10-2019</td>
+              <td>₹5500</td>
+              <td>₹400</td>
+            </tr>
+            <tr id="myBtn">
+              <td>10-10-2019</td>
+              <td>₹3600</td>
+              <td>₹220</td>
+            </tr>
+            <tr id="myBtn">
+              <td>11-10-2019</td>
+              <td>₹6400 </td>
+              <td>₹600</td>
+            </tr>
+          </a>
+          </tbody>
+        </table>
+        </div>
+        </div>
+  
+
+</div><div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><div class="row">
+            <div class="col s3"></div>
+        <div class="col s5" style="margin-left: 50px;">
+      <div class="container" style="border-radius:20px;border:2px solid grey;padding:20px">
+        <table class="centered">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Bata Power Men's Sports</td>
+              <td>1</td>
+              <td>₹1800</td>
+            </tr>
+            <tr>
+              <td>Bata white Sports</td>
+              <td>1</td>
+              <td>₹1400</td>
+            </tr>
+            <tr>
+              <td>Bata Power Wallet</td>
+              <td>1</td>
+              <td>₹800</td>
+            </tr>
+            <tr>
+              <td><b><u>TOTAL</u></u></b></td>
+              <td> </td>
+              <td>₹4000</td>
+            </tr>
+          </tbody>
+        </table></div>
+        </div></p>
+  </div>
+
+</div>  
+
+
+       
+      </div>
+    </div>
+    <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  </body>
+</html>

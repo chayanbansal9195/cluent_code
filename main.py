@@ -48,4 +48,8 @@ def aaccount():
 @app.route('/assigncoupons')
 def assigncoupons():
     return render_template('assigncoupons.html')
+
+@app.route('/chistory')
+def chistory():
+    return render_template('chistory.html')    
 app.run(debug=True)
